@@ -1,11 +1,12 @@
 package com.example.android.thatcountry.Models;
 
+import java.io.Serializable;
 import java.util.List;
 
 import com.google.gson.annotations.SerializedName;
 
 
-public class Country {
+public class Country implements Serializable {
 
     @SerializedName("name") private String name;
     @SerializedName("topLevelDomain") private List<String> topLevelDomain;
