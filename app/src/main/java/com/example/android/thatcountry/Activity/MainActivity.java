@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         Bundle bundle = intent.getBundleExtra("bundle");
         countriesList = (List<Country>) bundle.getSerializable("countries");
 
-        recyclerView = (RecyclerView)findViewById(R.id.recicler_countries);
+        recyclerView = (RecyclerView)findViewById(R.id.recycler_countries);
 
         cAdapter = new CountriesAdapter(countriesList);
         RecyclerView.LayoutManager cLayoutManager = new LinearLayoutManager(getApplicationContext());

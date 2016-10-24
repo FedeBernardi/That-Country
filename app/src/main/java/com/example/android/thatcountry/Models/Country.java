@@ -20,7 +20,7 @@ public class Country implements Serializable {
     @SerializedName("subregion") private String subregion;
     @SerializedName("translation") private Translations translations;
     @SerializedName("population") private int population;
-    @SerializedName("latLng") private List<Integer> latlng;
+    @SerializedName("latlng") private List<Float> latlng;
     @SerializedName("demonym") private String demonym;
     @SerializedName("area") private float area;
     @SerializedName("gini") private float gini;
@@ -34,7 +34,7 @@ public class Country implements Serializable {
     public Country(String name, List<String> topLevelDomain, String alpha3Code, String alpha2Code,
                    List<String> callingCodes, String capital, List<String> altSpelling,
                    String relevance, String region, String subregion, Translations translations,
-                   int population, List<Integer> latlng, String demonym, float area, float gini,
+                   int population, List<Float> latlng, String demonym, float area, float gini,
                    List<String> timezones, List<String> borders, String nativeName,
                    String numericCode, List<String> currencies, List<String> languages) {
         this.name = name;
@@ -158,11 +158,11 @@ public class Country implements Serializable {
         this.population = population;
     }
 
-    public List<Integer> getLatlng() {
+    public List<Float> getLatlng() {
         return latlng;
     }
 
-    public void setLatlng(List<Integer> latlng) {
+    public void setLatlng(List<Float> latlng) {
         this.latlng = latlng;
     }
 
